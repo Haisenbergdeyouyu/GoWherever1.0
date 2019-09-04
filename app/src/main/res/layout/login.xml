@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background">
@@ -7,31 +9,66 @@
 
     <EditText
         android:id="@+id/user_ET"
-        android:drawableLeft="@drawable/user_image"
         android:layout_width="320dp"
         android:layout_height="40dp"
-        android:textSize="30dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250dp"
-        android:background="@color/colorWhite"/>
+        android:background="@color/colorWhite"
+        android:drawableLeft="@drawable/user_image"
+        android:textSize="30dp"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/password_ET"
-        android:drawableLeft="@drawable/password_image"
+        android:drawableStart="@drawable/password_image"
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:textSize="30dp"
         android:layout_centerHorizontal="true"
         android:inputType="textPassword"
         android:layout_marginTop="320dp"
-        android:background="@color/colorWhite"/>
+        android:background="@color/colorWhite"
+        android:importantForAutofill="no" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:layout_marginTop="380dp"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="310dp"
+        android:text="@string/forget"
+        android:textColor="#00BCD4"
+        android:textSize="18sp"
+        tools:text="忘记密码"
+        android:onClick=""/>
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="310dp"
+        android:text="@string/sign"
+        android:textColor="#00BCD4"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="481dp"
+        android:layout_marginEnd="162dp"
+        android:text="@string/forget"
+        android:visibility="visible"
+        tools:text="登录" />
 
 
 </RelativeLayout>
